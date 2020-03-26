@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>Webjava</display-name>
+  
+  
+  <filter>
+  	<filter-name>EncodingFilter</filter-name>
+  	<filter-class>com.filter.EncodingFilter</filter-class><!--全路径 从根包开始一直到类名-->
+  </filter>
+ <filter-mapping>
+  	<filter-name>EncodingFilter</filter-name>
+  	<url-pattern>*.do</url-pattern> 
+  </filter-mapping>
+<filter-mapping>
+  	<filter-name>EncodingFilter</filter-name>
+  	<url-pattern>*.jsp</url-pattern> 
+  </filter-mapping>
+ <filter-mapping>
+  	<filter-name>EncodingFilter</filter-name>
+  	<url-pattern>*.action</url-pattern> 
+ </filter-mapping>
+
+
+<servlet>
+    <servlet-name>DengluServlet</servlet-name>
+    <servlet-class>com.servlet.DengluServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdateServlet</servlet-name>
+    <servlet-class>com.servlet.UpdateServlet</servlet-class>
+  </servlet>
+ <servlet>
+    <servlet-name>GetidServlet</servlet-name>
+    <servlet-class>com.servlet.GetidServlet</servlet-class>
+  </servlet>
+    <servlet>
+        <servlet-name>Appointment</servlet-name>
+        <servlet-class>com.servlet.Appointment</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SelectTimeTable</servlet-name>
+        <servlet-class>com.servlet.SelectTimeTable</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ChangeInformation</servlet-name>
+        <servlet-class>com.servlet.ChangeInformation</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MachineAdministration</servlet-name>
+        <servlet-class>com.servlet.MachineAdministration</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SelectMachine</servlet-name>
+        <servlet-class>com.servlet.SelectMachine</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CancelWindow</servlet-name>
+        <servlet-class>com.servlet.CancelWindow</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PublicMachine</servlet-name>
+        <servlet-class>com.servlet.PublicMachine</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CreditAdministration</servlet-name>
+        <servlet-class>com.servlet.CreditAdministration</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>NoticeAdministration</servlet-name>
+        <servlet-class>com.servlet.NoticeAdministration</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>NoticePublish</servlet-name>
+        <servlet-class>com.servlet.NoticePublish</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>OperateCardServlet</servlet-name>
+        <servlet-class>com.servlet.OperateCardServlet</servlet-class>
+    </servlet>
+
+  <servlet-mapping><!--servlet类映射配置-->
+    <servlet-name>DengluServlet</servlet-name>
+    <url-pattern>/DengluServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateServlet</servlet-name>
+    <url-pattern>/UpdateServlet</url-pattern>
+  </servlet-mapping>
+<servlet-mapping>
+    <servlet-name>GetidServlet</servlet-name>
+    <url-pattern>/GetidServlet</url-pattern>
+ </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Appointment</servlet-name>
+        <url-pattern>/Appointment</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SelectTimeTable</servlet-name>
+        <url-pattern>/SelectTimeTable</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ChangeInformation</servlet-name>
+        <url-pattern>/ChangeInformation</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MachineAdministration</servlet-name>
+        <url-pattern>/MachineAdministration</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SelectMachine</servlet-name>
+        <url-pattern>/SelectMachine</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CancelWindow</servlet-name>
+        <url-pattern>/CancelWindow</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PublicMachine</servlet-name>
+        <url-pattern>/PublicMachine</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreditAdministration</servlet-name>
+        <url-pattern>/CreditAdministration</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>NoticeAdministration</servlet-name>
+        <url-pattern>/NoticeAdministration</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>NoticePublish</servlet-name>
+        <url-pattern>/NoticePublish</url-pattern>
+    </servlet-mapping>
+	 <servlet-mapping>
+        <servlet-name>OperateCardServlet</servlet-name>
+        <url-pattern>/OperateCardServlet</url-pattern>
+    </servlet-mapping>
+    <session-config>
+    <session-timeout>300</session-timeout>
+</session-config>
+
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
